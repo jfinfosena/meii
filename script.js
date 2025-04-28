@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
         easing: 'ease',
         once: true
     });
+    
+    // Inicializar el carrusel de imágenes
+    initCarrusel();
 
     // Configuración de partículas para el fondo del hero
     particlesJS('particles-js', {
@@ -148,45 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Carrusel de testimonios
-    const testimonios = document.querySelectorAll('.testimonio');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let currentIndex = 0;
-
-    function showTestimonio(index) {
-        testimonios.forEach(testimonio => testimonio.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        
-        testimonios[index].classList.add('active');
-        dots[index].classList.add('active');
-        currentIndex = index;
-    }
-
-    // Evento para los puntos indicadores
-    dots.forEach(dot => {
-        dot.addEventListener('click', function() {
-            const index = parseInt(this.getAttribute('data-index'));
-            showTestimonio(index);
-        });
-    });
-
-    // Eventos para los botones de navegación
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? testimonios.length - 1 : currentIndex - 1;
-        showTestimonio(currentIndex);
-    });
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === testimonios.length - 1) ? 0 : currentIndex + 1;
-        showTestimonio(currentIndex);
-    });
-
-    // Cambio automático de testimonios
-    setInterval(() => {
-        currentIndex = (currentIndex === testimonios.length - 1) ? 0 : currentIndex + 1;
-        showTestimonio(currentIndex);
-    }, 5000);
+    initTestimonios();
 
     // Formulario de preinscripción
     const form = document.getElementById('preinscripcion-form');
@@ -279,3 +244,100 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Función para controlar el carrusel de imágenes
+function initCarrusel() {
+    const slides = document.querySelectorAll('.carrusel-slide');
+    const indicators = document.querySelectorAll('.carrusel-indicator');
+    const prevBtn = document.querySelector('.carrusel-prev');
+    const nextBtn = document.querySelector('.carrusel-next');
+    let currentIndex = 0;
+    
+    // Función para mostrar una diapositiva específica
+    function showSlide(index) {
+        // Ocultar todas las diapositivas y desactivar indicadores
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Mostrar la diapositiva actual y activar su indicador
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        currentIndex = index;
+    }
+    
+    // Evento para el botón anterior
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            showSlide(currentIndex);
+        });
+    }
+    
+    // Evento para el botón siguiente
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            showSlide(currentIndex);
+        });
+    }
+    
+    // Eventos para los indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+    
+    // Cambio automático de diapositivas cada 5 segundos
+    setInterval(() => {
+        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+        showSlide(currentIndex);
+    }, 5000);
+}
+
+// Función para controlar el carrusel de testimonios
+function initTestimonios() {
+    const testimonios = document.querySelectorAll('.testimonio');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtnTest = document.querySelector('.prev');
+    const nextBtnTest = document.querySelector('.next');
+    let currentTestIndex = 0;
+
+    function showTestimonio(index) {
+        testimonios.forEach(testimonio => testimonio.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        testimonios[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentTestIndex = index;
+    }
+
+    // Evento para los puntos indicadores
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            showTestimonio(index);
+        });
+    });
+
+    // Eventos para los botones de navegación
+    if (prevBtnTest) {
+        prevBtnTest.addEventListener('click', () => {
+            currentTestIndex = (currentTestIndex === 0) ? testimonios.length - 1 : currentTestIndex - 1;
+            showTestimonio(currentTestIndex);
+        });
+    }
+
+    if (nextBtnTest) {
+        nextBtnTest.addEventListener('click', () => {
+            currentTestIndex = (currentTestIndex === testimonios.length - 1) ? 0 : currentTestIndex + 1;
+            showTestimonio(currentTestIndex);
+        });
+    }
+
+    // Cambio automático de testimonios
+    setInterval(() => {
+        currentTestIndex = (currentTestIndex === testimonios.length - 1) ? 0 : currentTestIndex + 1;
+        showTestimonio(currentTestIndex);
+    }, 5000);
+}
