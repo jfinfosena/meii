@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+  <!-- Líneas horizontales -->
+  <line x1="0" y1="50" x2="1000" y2="50" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="0" y1="150" x2="1000" y2="150" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="0" y1="250" x2="1000" y2="250" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="0" y1="350" x2="1000" y2="350" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="0" y1="450" x2="1000" y2="450" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  
+  <!-- Líneas verticales -->
+  <line x1="100" y1="0" x2="100" y2="500" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="300" y1="0" x2="300" y2="500" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="500" y1="0" x2="500" y2="500" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="700" y1="0" x2="700" y2="500" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="900" y1="0" x2="900" y2="500" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+  
+  <!-- Círculos en intersecciones -->
+  <circle cx="100" cy="50" r="3" fill="#ffffff" fill-opacity="0.5" />
+  <circle cx="300" cy="150" r="3" fill="#ffffff" fill-opacity="0.5" />
+  <circle cx="500" cy="250" r="3" fill="#ffffff" fill-opacity="0.5" />
+  <circle cx="700" cy="350" r="3" fill="#ffffff" fill-opacity="0.5" />
+  <circle cx="900" cy="450" r="3" fill="#ffffff" fill-opacity="0.5" />
+  
+  <!-- Líneas diagonales -->
+  <line x1="0" y1="0" x2="1000" y2="500" stroke="#ffffff" stroke-width="1" stroke-opacity="0.2" />
+  <line x1="0" y1="500" x2="1000" y2="0" stroke="#ffffff" stroke-width="1" stroke-opacity="0.2" />
+  
+  <!-- Elementos de circuito -->
+  <rect x="200" y="100" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4" />
+  <rect x="600" y="300" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4" />
+  <circle cx="400" cy="200" r="10" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4" />
+  <circle cx="800" cy="400" r="10" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4" />
+  
+  <!-- Líneas de conexión -->
+  <path d="M220 110 H 390 V 200" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4" />
+  <path d="M410 200 H 590 V 300" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4" />
+  <path d="M620 310 H 790 V 400" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4" />
+</svg>

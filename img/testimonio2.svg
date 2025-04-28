@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Fondo circular -->
+  <circle cx="150" cy="150" r="150" fill="#00A3E0"/>
+  
+  <!-- Silueta de persona (femenina) -->
+  <circle cx="150" cy="120" r="50" fill="#FFFFFF"/>
+  <path d="M150,180 C117,180 90,210 90,250 L210,250 C210,210 183,180 150,180 Z" fill="#FFFFFF"/>
+  
+  <!-- Detalles de la persona -->
+  <circle cx="130" cy="110" r="5" fill="#00A3E0"/>
+  <circle cx="170" cy="110" r="5" fill="#00A3E0"/>
+  <path d="M130,140 Q150,160 170,140" fill="none" stroke="#00A3E0" stroke-width="3"/>
+  
+  <!-- Cabello largo -->
+  <path d="M100,120 C100,80 200,80 200,120 L200,140 C200,140 180,130 150,130 C120,130 100,140 100,140 L100,120 Z" fill="#FFFFFF"/>
+  
+  <!-- Elementos tecnológicos de fondo -->
+  <rect x="40" y="40" width="20" height="20" fill="#F5A623" opacity="0.5"/>
+  <rect x="240" y="40" width="20" height="20" fill="#F5A623" opacity="0.5"/>
+  <rect x="40" y="240" width="20" height="20" fill="#F5A623" opacity="0.5"/>
+  <rect x="240" y="240" width="20" height="20" fill="#F5A623" opacity="0.5"/>
+</svg>

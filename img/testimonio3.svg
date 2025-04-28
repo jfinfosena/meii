@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Fondo circular -->
+  <circle cx="150" cy="150" r="150" fill="#2ECC71"/>
+  
+  <!-- Silueta de persona (joven) -->
+  <circle cx="150" cy="120" r="50" fill="#FFFFFF"/>
+  <path d="M150,180 C117,180 90,210 90,250 L210,250 C210,210 183,180 150,180 Z" fill="#FFFFFF"/>
+  
+  <!-- Detalles de la persona -->
+  <circle cx="130" cy="110" r="5" fill="#2ECC71"/>
+  <circle cx="170" cy="110" r="5" fill="#2ECC71"/>
+  <path d="M130,140 Q150,160 170,140" fill="none" stroke="#2ECC71" stroke-width="3"/>
+  
+  <!-- Cabello moderno -->
+  <path d="M150,70 C120,70 100,90 100,120 L100,130 C110,120 130,115 150,115 C170,115 190,120 200,130 L200,120 C200,90 180,70 150,70 Z" fill="#FFFFFF"/>
+  
+  <!-- Elementos tecnológicos de fondo -->
+  <polygon points="50,50 70,30 90,50 70,70" fill="#F5A623" opacity="0.5"/>
+  <polygon points="210,50 230,30 250,50 230,70" fill="#F5A623" opacity="0.5"/>
+  <polygon points="50,210 70,190 90,210 70,230" fill="#F5A623" opacity="0.5"/>
+  <polygon points="210,210 230,190 250,210 230,230" fill="#F5A623" opacity="0.5"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Fondo circular -->
+  <circle cx="150" cy="150" r="150" fill="#005B99"/>
+  
+  <!-- Silueta de persona -->
+  <circle cx="150" cy="120" r="50" fill="#FFFFFF"/>
+  <path d="M150,180 C117,180 90,210 90,250 L210,250 C210,210 183,180 150,180 Z" fill="#FFFFFF"/>
+  
+  <!-- Detalles de la persona -->
+  <circle cx="130" cy="110" r="5" fill="#005B99"/>
+  <circle cx="170" cy="110" r="5" fill="#005B99"/>
+  <path d="M130,140 Q150,160 170,140" fill="none" stroke="#005B99" stroke-width="3"/>
+  
+  <!-- Elementos tecnológicos de fondo -->
+  <circle cx="50" cy="50" r="10" fill="#F5A623" opacity="0.5"/>
+  <circle cx="250" cy="50" r="10" fill="#F5A623" opacity="0.5"/>
+  <circle cx="50" cy="250" r="10" fill="#F5A623" opacity="0.5"/>
+  <circle cx="250" cy="250" r="10" fill="#F5A623" opacity="0.5"/>
+</svg>
