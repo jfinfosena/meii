@@ -247,6 +247,14 @@ section {
     font-weight: 500;
 }
 
+.hero-content .centro-direccion {
+    color: var(--blanco);
+    font-size: 1rem;
+    margin-top: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
 .hero h1 {
     color: var(--blanco);
     font-size: 3.5rem;
@@ -934,5 +942,153 @@ footer {
     
     .cta-final p {
         font-size: 1rem;
+    }
+}
+
+/* Sección de Programas y Cursos */
+.programas-cursos {
+    background-color: var(--gris-claro);
+    padding: 80px 0;
+}
+
+.programas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.programa-categoria {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programa-categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-header {
+    background: linear-gradient(to right, var(--azul-tecnologico-1), var(--azul-tecnologico-2));
+    color: var(--blanco);
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.categoria-header i {
+    font-size: 1.8rem;
+}
+
+.categoria-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.programa-item {
+    display: flex;
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.programa-item:last-child {
+    border-bottom: none;
+}
+
+.programa-item:hover {
+    background-color: rgba(0, 163, 224, 0.05);
+}
+
+.programa-icon {
+    flex: 0 0 60px;
+    height: 60px;
+    background-color: var(--naranja-vibrante);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--blanco);
+    margin-right: 20px;
+    box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.2);
+}
+
+.programa-info {
+    flex: 1;
+}
+
+.programa-info h4 {
+    color: var(--azul-tecnologico-1);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.programa-info p {
+    color: var(--gris-medio);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.curso-item {
+    background-color: rgba(0, 163, 224, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--azul-tecnologico-2);
+}
+
+.curso-item:hover {
+    background-color: rgba(0, 163, 224, 0.1);
+    transform: translateX(5px);
+}
+
+.curso-item i {
+    font-size: 1.5rem;
+    color: var(--azul-tecnologico-2);
+    flex: 0 0 30px;
+}
+
+.curso-item h4 {
+    color: var(--azul-tecnologico-1);
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+    .programa-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .programa-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .cursos-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .curso-item {
+        padding: 15px;
     }
 }
