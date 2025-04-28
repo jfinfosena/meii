@@ -118,7 +118,7 @@ section {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 91, 153, 0.8), rgba(0, 163, 224, 0.8)), url('img/hero-bg.jpg');
+    background: linear-gradient(rgba(19, 190, 65, 0.8), rgba(23, 151, 6, 0.8)), url('img/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -237,6 +237,14 @@ section {
     max-width: 800px;
     padding: 0 20px;
     z-index: 2;
+}
+
+.hero-content .centro-titulo {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    margin-top: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
 }
 
 .hero h1 {
@@ -451,10 +459,11 @@ section {
     width: 100%;
     position: relative;
     padding: 80px 0;
+    margin-bottom: 0;
 }
 
 .banner-overlay {
-    background: linear-gradient(to right, rgba(0, 91, 153, 0.9), rgba(0, 163, 224, 0.9));
+    background: linear-gradient(to right, rgba(0, 91, 153, 0.95), rgba(0, 163, 224, 0.95));
     position: absolute;
     top: 0;
     left: 0;
@@ -480,15 +489,17 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .pasos-inscripcion {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto 60px;
+    margin: 0 auto;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .paso {
@@ -496,28 +507,46 @@ section {
     min-width: 200px;
     text-align: center;
     padding: 20px;
-    margin: 0 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+}
+
+.paso h3 {
+    color: var(--blanco);
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+}
+
+.paso p {
+    color: var(--blanco);
+    opacity: 0.9;
+    font-size: 1rem;
 }
 
 .paso-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background-color: var(--naranja-vibrante);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--blanco);
     margin: 0 auto 15px;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
 }
-   
 
-.timeline-content h3 {
-    margin-bottom: 10px;
-    color: var(--naranja-vibrante);
-    font-size: 1.3rem;
+.paso:hover .paso-icon {
+    transform: scale(1.1);
 }
 
 .form-container {
@@ -579,9 +608,10 @@ section {
     background-color: var(--azul-tecnologico-1);
     color: var(--blanco);
     text-align: center;
-    padding: 180px 0;
+    padding: 80px 0;
     position: relative;
     overflow: hidden;
+    margin-top: 0;
 }
 
 .cta-final h2 {
@@ -798,12 +828,59 @@ footer {
         padding: 30px 20px;
     }
     
+    .banner-inscripcion {
+        padding: 40px 0;
+    }
+    
+    .banner-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .pasos-inscripcion {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .paso {
+        width: 100%;
+        max-width: 280px;
+        margin: 0;
+        padding: 15px;
+    }
+    
+    .paso-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .paso h3 {
+        font-size: 1.1rem;
+        margin: 10px 0 5px;
+    }
+    
+    .paso p {
+        font-size: 0.9rem;
+    }
+    
+    .cta-final {
+        padding: 60px 0;
+    }
+    
     .cta-final h2 {
         font-size: 2rem;
     }
     
     .cta-final p {
         font-size: 1.1rem;
+    }
+    
+    .hero-content .centro-titulo {
+        font-size: 1.2rem;
+        margin-top: 20px;
     }
 }
 
@@ -845,6 +922,10 @@ footer {
     .cta-button {
         padding: 12px 25px;
         font-size: 1rem;
+    }
+    
+    .cta-final {
+        padding: 40px 0;
     }
     
     .cta-final h2 {
